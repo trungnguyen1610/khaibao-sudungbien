@@ -9,17 +9,19 @@
 
 <body>
     <script>
-        var a = prompt("Nhập vào số thứ 1");
-        var b = prompt("Nhập vào số thứ 2");
-        parseInt(a);
-        parseInt(b);
-        if (a % b == 0) {
-            document.write("a là bội số của b");
-            //alert()
-        } else {
-            document.write("a không là bội số của b");
-            //alert()
+        do {
+            var a = parseInt(window.prompt("Please enter a number from 1 to 100", ""), 10);
+            var b = parseInt(window.prompt("Please enter b number from 1 to 100", ""), 10);
+        }while((isNaN(a) || isNaN(b)) || (a>100 || b>100) || (a<1 || b<1));
+        if(a%b==0){
+         document.write(" a là bội số của b");
+        }else{
+            document.write(" a k là bội số của b");
         }
+        // var a = parseInt(prompt("Nhập vào số thứ 1"),10);
+        // var b = parseInt(prompt("Nhập vào số thứ 2"),10);
+        // console.log(a);
+
     </script>
 </body>
 
